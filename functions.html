@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module functions</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">functions</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:/Users/yannzurstrassen/Documents/PHAS0056/in2HEP-master/notebooks/functions.py">/Users/yannzurstrassen/Documents/PHAS0056/in2HEP-master/notebooks/functions.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-best_pca"><strong>best_pca</strong></a>(data, variables, num)</dt><dd><span class="code">Select&nbsp;the&nbsp;top&nbsp;'num'&nbsp;variables&nbsp;based&nbsp;on&nbsp;Principal&nbsp;Component&nbsp;Analysis&nbsp;(PCA).<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;data:&nbsp;Input&nbsp;data&nbsp;matrix&nbsp;(rows&nbsp;represent&nbsp;samples,&nbsp;columns&nbsp;represent&nbsp;features)<br>
+-&nbsp;variables:&nbsp;List&nbsp;of&nbsp;variable&nbsp;names/features&nbsp;used&nbsp;in&nbsp;the&nbsp;model<br>
+-&nbsp;num:&nbsp;Number&nbsp;of&nbsp;variables&nbsp;to&nbsp;select<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;List&nbsp;of&nbsp;selected&nbsp;variables</span></dd></dl>
+ <dl><dt><a name="-compute_covariance_matrix"><strong>compute_covariance_matrix</strong></a>(data)</dt><dd><span class="code">Compute&nbsp;the&nbsp;covariance&nbsp;matrix&nbsp;of&nbsp;the&nbsp;data.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;data:&nbsp;Input&nbsp;data&nbsp;matrix&nbsp;(rows&nbsp;represent&nbsp;samples,&nbsp;columns&nbsp;represent&nbsp;features)<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Covariance&nbsp;matrix</span></dd></dl>
+ <dl><dt><a name="-model_Final"><strong>model_Final</strong></a>(num)</dt><dd><span class="code">Create&nbsp;and&nbsp;compile&nbsp;the&nbsp;final&nbsp;neural&nbsp;network&nbsp;model.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;num:&nbsp;Number&nbsp;of&nbsp;features<br>
+-&nbsp;learning_rate:&nbsp;Learning&nbsp;rate&nbsp;for&nbsp;the&nbsp;optimizer<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Compiled&nbsp;Keras&nbsp;model<br>
+-&nbsp;Sensitivity&nbsp;achieved&nbsp;by&nbsp;the&nbsp;model</span></dd></dl>
+ <dl><dt><a name="-model_Final_sensitivity"><strong>model_Final_sensitivity</strong></a>(num)</dt><dd><span class="code">Create&nbsp;and&nbsp;compile&nbsp;the&nbsp;final&nbsp;neural&nbsp;network&nbsp;model&nbsp;for&nbsp;output&nbsp;region&nbsp;analysis.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;num:&nbsp;Number&nbsp;of&nbsp;features<br>
+-&nbsp;learning_rate:&nbsp;Learning&nbsp;rate&nbsp;for&nbsp;the&nbsp;optimizer<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Compiled&nbsp;Keras&nbsp;model<br>
+-&nbsp;Sensitivity&nbsp;achieved&nbsp;by&nbsp;the&nbsp;model</span></dd></dl>
+ <dl><dt><a name="-model_Final_training_size"><strong>model_Final_training_size</strong></a>(num, df_train, df_val, df_test)</dt><dd><span class="code">Create&nbsp;and&nbsp;compile&nbsp;the&nbsp;final&nbsp;neural&nbsp;network&nbsp;model.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;num:&nbsp;Number&nbsp;of&nbsp;variables/features&nbsp;to&nbsp;use&nbsp;in&nbsp;the&nbsp;model<br>
+-&nbsp;df_train:&nbsp;DataFrame&nbsp;containing&nbsp;the&nbsp;training&nbsp;data<br>
+-&nbsp;df_val:&nbsp;DataFrame&nbsp;containing&nbsp;the&nbsp;validation&nbsp;data<br>
+-&nbsp;df_test:&nbsp;DataFrame&nbsp;containing&nbsp;the&nbsp;test&nbsp;data<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;model:&nbsp;Compiled&nbsp;Keras&nbsp;model<br>
+-&nbsp;sens:&nbsp;Sensitivity&nbsp;achieved&nbsp;by&nbsp;the&nbsp;model</span></dd></dl>
+ <dl><dt><a name="-model_activation"><strong>model_activation</strong></a>(num, activation)</dt><dd><span class="code">Create&nbsp;and&nbsp;compile&nbsp;the&nbsp;final&nbsp;neural&nbsp;network&nbsp;model&nbsp;for&nbsp;variable&nbsp;activation&nbsp;functions.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;num:&nbsp;Number&nbsp;of&nbsp;variables/features&nbsp;to&nbsp;use&nbsp;in&nbsp;the&nbsp;model<br>
+-&nbsp;activation:&nbsp;Activation&nbsp;function&nbsp;for&nbsp;the&nbsp;hidden&nbsp;layers<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Compiled&nbsp;model<br>
+-&nbsp;Sensitivity&nbsp;achieved&nbsp;by&nbsp;the&nbsp;model</span></dd></dl>
+ <dl><dt><a name="-model_nodes2"><strong>model_nodes2</strong></a>(nodes, variables)</dt><dd><span class="code">Create&nbsp;and&nbsp;compile&nbsp;a&nbsp;neural&nbsp;network&nbsp;model&nbsp;with&nbsp;a&nbsp;second&nbsp;hidden&nbsp;layer.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;nodes&nbsp;(int):&nbsp;Number&nbsp;of&nbsp;nodes/neurons&nbsp;in&nbsp;the&nbsp;hidden&nbsp;layer.<br>
+-&nbsp;variables&nbsp;(list):&nbsp;List&nbsp;of&nbsp;input&nbsp;variables/features.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Compiled&nbsp;Keras&nbsp;model.</span></dd></dl>
+ <dl><dt><a name="-model_nodes3"><strong>model_nodes3</strong></a>(nodes, variables)</dt><dd><span class="code">Create&nbsp;and&nbsp;compile&nbsp;a&nbsp;neural&nbsp;network&nbsp;model&nbsp;with&nbsp;a&nbsp;third&nbsp;hidden&nbsp;layer.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;nodes&nbsp;(int):&nbsp;Number&nbsp;of&nbsp;nodes/neurons&nbsp;in&nbsp;the&nbsp;second&nbsp;hidden&nbsp;layer.<br>
+-&nbsp;variables&nbsp;(list):&nbsp;List&nbsp;of&nbsp;input&nbsp;variables/features.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Compiled&nbsp;Keras&nbsp;model.</span></dd></dl>
+ <dl><dt><a name="-model_nodes4"><strong>model_nodes4</strong></a>(nodes, variables)</dt><dd><span class="code">Create&nbsp;and&nbsp;compile&nbsp;a&nbsp;neural&nbsp;network&nbsp;model&nbsp;with&nbsp;a&nbsp;fourth&nbsp;hidden&nbsp;layer.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;nodes&nbsp;(int):&nbsp;Number&nbsp;of&nbsp;nodes/neurons&nbsp;in&nbsp;the&nbsp;third&nbsp;hidden&nbsp;layer.<br>
+-&nbsp;variables&nbsp;(list):&nbsp;List&nbsp;of&nbsp;input&nbsp;variables/features.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Compiled&nbsp;Keras&nbsp;model.</span></dd></dl>
+ <dl><dt><a name="-model_nodes_1"><strong>model_nodes_1</strong></a>(nodes, variables)</dt><dd><span class="code">Create&nbsp;and&nbsp;compile&nbsp;a&nbsp;neural&nbsp;network&nbsp;model&nbsp;with&nbsp;a&nbsp;single&nbsp;hidden&nbsp;layer.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;nodes&nbsp;(int):&nbsp;Number&nbsp;of&nbsp;nodes/neurons&nbsp;in&nbsp;the&nbsp;hidden&nbsp;layer.<br>
+-&nbsp;variables&nbsp;(list):&nbsp;List&nbsp;of&nbsp;input&nbsp;variables/features.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Compiled&nbsp;Keras&nbsp;model.</span></dd></dl>
+ <dl><dt><a name="-model_optimizer"><strong>model_optimizer</strong></a>(variables, optimizer, loss)</dt><dd><span class="code">Create&nbsp;and&nbsp;compile&nbsp;a&nbsp;neural&nbsp;network&nbsp;with&nbsp;trial&nbsp;optimizer&nbsp;and&nbsp;loss.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;variables:&nbsp;List&nbsp;of&nbsp;input&nbsp;variables/features&nbsp;used&nbsp;in&nbsp;the&nbsp;model<br>
+-&nbsp;optimizer:&nbsp;Name&nbsp;of&nbsp;the&nbsp;optimizer&nbsp;to&nbsp;use&nbsp;<br>
+-&nbsp;loss:&nbsp;Name&nbsp;of&nbsp;the&nbsp;loss&nbsp;function&nbsp;to&nbsp;use&nbsp;<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Compiled&nbsp;model</span></dd></dl>
+ <dl><dt><a name="-model_training"><strong>model_training</strong></a>(num, learning_rate, epoch, batchsize)</dt><dd><span class="code">Create&nbsp;and&nbsp;compile&nbsp;the&nbsp;final&nbsp;neural&nbsp;network&nbsp;model&nbsp;for&nbsp;variable&nbsp;training&nbsp;parameters.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;num:&nbsp;Number&nbsp;of&nbsp;features<br>
+-&nbsp;learning_rate:&nbsp;Learning&nbsp;rate&nbsp;for&nbsp;the&nbsp;optimizer<br>
+-&nbsp;epoch:&nbsp;number&nbsp;of&nbsp;epochs&nbsp;in&nbsp;training<br>
+-&nbsp;batchsize:&nbsp;batchsize&nbsp;&nbsp;in&nbsp;training<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Compiled&nbsp;Keras&nbsp;model<br>
+-&nbsp;Sensitivity&nbsp;achieved&nbsp;by&nbsp;the&nbsp;model</span></dd></dl>
+ <dl><dt><a name="-perform_pca"><strong>perform_pca</strong></a>(data)</dt><dd><span class="code">Perform&nbsp;Principal&nbsp;Component&nbsp;Analysis&nbsp;(PCA)&nbsp;on&nbsp;the&nbsp;given&nbsp;data.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;data:&nbsp;Input&nbsp;data&nbsp;matrix&nbsp;(rows&nbsp;represent&nbsp;samples,&nbsp;columns&nbsp;represent&nbsp;features)<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;variance_ratio:&nbsp;Explained&nbsp;variance&nbsp;ratio&nbsp;for&nbsp;each&nbsp;principal&nbsp;component<br>
+-&nbsp;eigenvectors:&nbsp;Eigenvectors&nbsp;of&nbsp;the&nbsp;covariance&nbsp;matrix</span></dd></dl>
+ <dl><dt><a name="-plot_match_ratios"><strong>plot_match_ratios</strong></a>(num_repetitions)</dt><dd><span class="code">Plot&nbsp;the&nbsp;average&nbsp;match&nbsp;ratio&nbsp;between&nbsp;the&nbsp;neural&nbsp;network&nbsp;predictions&nbsp;and&nbsp;cut-based&nbsp;predictions&nbsp;over&nbsp;a&nbsp;range&nbsp;of&nbsp;threshold&nbsp;probabilities.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;num_repetitions&nbsp;(int):&nbsp;Number&nbsp;of&nbsp;repetitions&nbsp;for&nbsp;calculating&nbsp;match&nbsp;ratios&nbsp;(default&nbsp;is&nbsp;10).<br>
+&nbsp;<br>
+Returns:<br>
+None</span></dd></dl>
+ <dl><dt><a name="-plot_sensitivity_histogram"><strong>plot_sensitivity_histogram</strong></a>(sens_array)</dt><dd><span class="code">Plot&nbsp;a&nbsp;histogram&nbsp;of&nbsp;the&nbsp;final&nbsp;model&nbsp;sensitivities&nbsp;to&nbsp;investigate&nbsp;variability&nbsp;in&nbsp;the&nbsp;model.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;sens_array&nbsp;(list):&nbsp;List&nbsp;containing&nbsp;sensitivity&nbsp;values&nbsp;of&nbsp;the&nbsp;final&nbsp;model.<br>
+&nbsp;<br>
+Returns:<br>
+None</span></dd></dl>
+ <dl><dt><a name="-plot_sensitivity_vs_optimizer"><strong>plot_sensitivity_vs_optimizer</strong></a>(efficiencies_optimizer, list_optimizer, list_loss, colors)</dt><dd><span class="code">Plot&nbsp;sensitivities&nbsp;achieved&nbsp;by&nbsp;different&nbsp;optimizers&nbsp;for&nbsp;each&nbsp;loss&nbsp;function.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;efficiencies_optimizer&nbsp;(dict):&nbsp;Dictionary&nbsp;containing&nbsp;sensitivities&nbsp;for&nbsp;different&nbsp;optimizer-loss&nbsp;function&nbsp;combinations.<br>
+-&nbsp;list_optimizer&nbsp;(list):&nbsp;List&nbsp;of&nbsp;optimizer&nbsp;names.<br>
+-&nbsp;list_loss&nbsp;(list):&nbsp;List&nbsp;of&nbsp;loss&nbsp;function&nbsp;names.<br>
+-&nbsp;colors&nbsp;(list):&nbsp;List&nbsp;of&nbsp;colors&nbsp;for&nbsp;the&nbsp;bars&nbsp;in&nbsp;the&nbsp;plot.<br>
+&nbsp;<br>
+Returns:<br>
+None</span></dd></dl>
+ <dl><dt><a name="-plot_sensitivity_vs_training_size"><strong>plot_sensitivity_vs_training_size</strong></a>(df_train, df_val, df_test, num_runs=5)</dt><dd><span class="code">Plot&nbsp;sensitivity&nbsp;achieved&nbsp;by&nbsp;the&nbsp;final&nbsp;neural&nbsp;network&nbsp;model&nbsp;for&nbsp;different&nbsp;subset&nbsp;sizes&nbsp;of&nbsp;the&nbsp;dataframe.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;df_train:&nbsp;DataFrame&nbsp;containing&nbsp;the&nbsp;training&nbsp;data<br>
+-&nbsp;df_val:&nbsp;DataFrame&nbsp;containing&nbsp;the&nbsp;validation&nbsp;data<br>
+-&nbsp;df_test:&nbsp;DataFrame&nbsp;containing&nbsp;the&nbsp;test&nbsp;data<br>
+-&nbsp;num_runs:&nbsp;Number&nbsp;of&nbsp;times&nbsp;to&nbsp;run&nbsp;the&nbsp;training&nbsp;and&nbsp;sensitivity&nbsp;calculation</span></dd></dl>
+ <dl><dt><a name="-plot_sensitivity_vs_variables"><strong>plot_sensitivity_vs_variables</strong></a>(num_iterations=5)</dt><dd><span class="code">Plot&nbsp;the&nbsp;average&nbsp;sensitivity&nbsp;with&nbsp;error&nbsp;bars&nbsp;against&nbsp;the&nbsp;number&nbsp;of&nbsp;variables.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;num_iterations&nbsp;(int):&nbsp;Number&nbsp;of&nbsp;iterations&nbsp;to&nbsp;compute&nbsp;sensitivity&nbsp;for&nbsp;each&nbsp;number&nbsp;of&nbsp;variables.<br>
+&nbsp;<br>
+Returns:<br>
+None</span></dd></dl>
+ <dl><dt><a name="-train_model_nodes"><strong>train_model_nodes</strong></a>(nodes, variables, x_train, y_train, w_train)</dt><dd><span class="code">Train&nbsp;a&nbsp;neural&nbsp;network&nbsp;model&nbsp;with&nbsp;a&nbsp;single&nbsp;hidden&nbsp;layer.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;nodes&nbsp;(int):&nbsp;Number&nbsp;of&nbsp;nodes/neurons&nbsp;in&nbsp;the&nbsp;hidden&nbsp;layer.<br>
+-&nbsp;variables&nbsp;(list):&nbsp;List&nbsp;of&nbsp;input&nbsp;variables/features.<br>
+-&nbsp;x_train&nbsp;(numpy.ndarray):&nbsp;Input&nbsp;training&nbsp;data.<br>
+-&nbsp;y_train&nbsp;(numpy.ndarray):&nbsp;Target&nbsp;training&nbsp;data.<br>
+-&nbsp;w_train&nbsp;(numpy.ndarray):&nbsp;Sample&nbsp;weights&nbsp;for&nbsp;training&nbsp;data.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Sensitivity&nbsp;of&nbsp;the&nbsp;trained&nbsp;model.</span></dd></dl>
+ <dl><dt><a name="-train_model_nodes_2"><strong>train_model_nodes_2</strong></a>(nodes, variables, x_train, y_train, w_train)</dt><dd><span class="code">Train&nbsp;the&nbsp;neural&nbsp;network&nbsp;with&nbsp;2&nbsp;hidden&nbsp;layers<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;nodes&nbsp;(int):&nbsp;Number&nbsp;of&nbsp;nodes/neurons&nbsp;in&nbsp;the&nbsp;hidden&nbsp;layer.<br>
+-&nbsp;variables&nbsp;(list):&nbsp;List&nbsp;of&nbsp;input&nbsp;variables/features.<br>
+-&nbsp;x_train&nbsp;(numpy.ndarray):&nbsp;Input&nbsp;training&nbsp;data.<br>
+-&nbsp;y_train&nbsp;(numpy.ndarray):&nbsp;Target&nbsp;training&nbsp;data.<br>
+-&nbsp;w_train&nbsp;(numpy.ndarray):&nbsp;Sample&nbsp;weights&nbsp;for&nbsp;training&nbsp;data.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Sensitivity&nbsp;of&nbsp;the&nbsp;trained&nbsp;model.</span></dd></dl>
+ <dl><dt><a name="-train_model_nodes_3"><strong>train_model_nodes_3</strong></a>(nodes, variables, x_train, y_train, w_train)</dt><dd><span class="code">Train&nbsp;the&nbsp;neural&nbsp;network&nbsp;with&nbsp;three&nbsp;hidden&nbsp;layers<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;nodes&nbsp;(int):&nbsp;Number&nbsp;of&nbsp;nodes/neurons&nbsp;in&nbsp;the&nbsp;second&nbsp;hidden&nbsp;layer.<br>
+-&nbsp;variables&nbsp;(list):&nbsp;List&nbsp;of&nbsp;input&nbsp;variables/features.<br>
+-&nbsp;x_train&nbsp;(numpy.ndarray):&nbsp;Input&nbsp;training&nbsp;data.<br>
+-&nbsp;y_train&nbsp;(numpy.ndarray):&nbsp;Target&nbsp;training&nbsp;data.<br>
+-&nbsp;w_train&nbsp;(numpy.ndarray):&nbsp;Sample&nbsp;weights&nbsp;for&nbsp;training&nbsp;data.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Sensitivity&nbsp;of&nbsp;the&nbsp;trained&nbsp;model.</span></dd></dl>
+ <dl><dt><a name="-train_model_nodes_4"><strong>train_model_nodes_4</strong></a>(nodes, variables, x_train, y_train, w_train)</dt><dd><span class="code">Train&nbsp;and&nbsp;compile&nbsp;neural&nbsp;network&nbsp;with&nbsp;four&nbsp;layers<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;nodes&nbsp;(int):&nbsp;Number&nbsp;of&nbsp;nodes/neurons&nbsp;in&nbsp;the&nbsp;third&nbsp;hidden&nbsp;layer.<br>
+-&nbsp;variables&nbsp;(list):&nbsp;List&nbsp;of&nbsp;input&nbsp;variables/features.<br>
+-&nbsp;x_train&nbsp;(numpy.ndarray):&nbsp;Input&nbsp;training&nbsp;data.<br>
+-&nbsp;y_train&nbsp;(numpy.ndarray):&nbsp;Target&nbsp;training&nbsp;data.<br>
+-&nbsp;w_train&nbsp;(numpy.ndarray):&nbsp;Sample&nbsp;weights&nbsp;for&nbsp;training&nbsp;data.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Sensitivity&nbsp;of&nbsp;the&nbsp;trained&nbsp;model.</span></dd></dl>
+ <dl><dt><a name="-train_model_optimizer"><strong>train_model_optimizer</strong></a>(variables, optimizer, loss, x_train, y_train, w_train)</dt><dd><span class="code">Train&nbsp;a&nbsp;neural&nbsp;network&nbsp;model&nbsp;with&nbsp;specified&nbsp;optimizer&nbsp;and&nbsp;loss&nbsp;function.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;variables:&nbsp;List&nbsp;of&nbsp;input&nbsp;variables/features&nbsp;used&nbsp;in&nbsp;the&nbsp;model<br>
+-&nbsp;optimizer:&nbsp;Name&nbsp;of&nbsp;the&nbsp;optimizer&nbsp;to&nbsp;use&nbsp;<br>
+-&nbsp;loss:&nbsp;Name&nbsp;of&nbsp;the&nbsp;loss&nbsp;function&nbsp;to&nbsp;use&nbsp;<br>
+-&nbsp;x_train:&nbsp;Input&nbsp;features&nbsp;for&nbsp;training<br>
+-&nbsp;y_train:&nbsp;Target&nbsp;labels&nbsp;for&nbsp;training<br>
+-&nbsp;w_train:&nbsp;Sample&nbsp;weights&nbsp;for&nbsp;training<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Sensitivity&nbsp;value</span></dd></dl>
+</td></tr></table>
+</body></html>
